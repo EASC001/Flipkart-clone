@@ -1,0 +1,51 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+.header{
+    position: relative;
+  
+ 
+}
+nav{
+    background-color: aqua;
+}
+nav > img{
+    margin-left: 50px;
+}
+.input input{
+    width: 700px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgb(231, 238, 239);
+    border: none;
+    margin-left: 50px;
+}
+.search{
+    position: absolute;
+    left: 900px;
+    font-size: 25px;
+}
+.cart a,.seller a,.dropdown a{
+    text-decoration: none;
+    color: black;
+    font-size: larger;
+    
+}
+.cart span,.seller span{
+    
+    font-size: 25px;
+}
+.btn{
+    font-size: larger;
+   
+
+}
+.dropdown span{
+    margin-top: 12px;
+   font-size: x-large;
+}
+.dropdown-menu  li{
+    font-size: small;
+    padding: 2px;
+}
