@@ -8,6 +8,7 @@ import {Types}  from "./components/hero/Types"
 
 
 
+
 function App() {
 
 
@@ -16,7 +17,7 @@ function App() {
     <BrowserRouter>
     <Navbar/>
     <Routes>
-     <Route path="/types" element={<Types/>}></Route>
+     <Route path="/" element={<Types/>}></Route>
     </Routes>
     </BrowserRouter>
      

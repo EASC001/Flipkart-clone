@@ -1,0 +1,45 @@
+.category{
+    height: 100px;
+}
+.category a{
+    text-decoration: none;
+    font-weight:600;
+    color: black;
+    padding: 8px;
+    text-align: center;
+    
+}
+.carousel-item img{
+    cursor: pointer;
+}
+
+
+.container-img{
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;   
+}
+
+.container-img img{
+    
+    height: 200px;
+    width: 200px;
+    padding: 12px;
+    
+}
+
+.container-img a{
+    text-decoration: none;
+}
+.type{
+    color:rgb(66, 66, 66);
+    /* margin-left: 20px; */
+    text-align: center;
+   
+}
+
+.price{
+   color: black;
+   text-align: center;
+}
+
