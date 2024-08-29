@@ -37,11 +37,11 @@ export const Navbar = () => {
             </ul>
         </div>
         <div className="cart">
-          <span><PiShoppingCart /></span>
+          <span className='pe-2'><PiShoppingCart /></span>
             <Link>Cart</Link>
         </div>
         <div className="seller">
-          <span><CiShop /></span>
+          <span className='pe-2'><CiShop /></span>
           <Link>Become a Seller</Link>
         </div>
         </div>
