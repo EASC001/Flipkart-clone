@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React from 'react'
 import { Link } from "react-router-dom";
-import logo from '../images/logo.png'
+import logo from '../images/flipkartimg1.png'
 import './navbar.css'
 import { CiSearch } from "react-icons/ci";
 import { CgProfile } from "react-icons/cg";
@@ -27,7 +27,7 @@ export const Navbar = () => {
          
           <button className='border border-0 btn  dropdown-toggle' data-bs-toggle="dropdown"> <span className='pe-2'><CgProfile/></span>Login</button>
             <ul className="dropdown-menu">
-                <li><Link to='/login' className="dropdown-item">New Customer?  Signup</Link></li>
+                <li><Link to='/signup' className="dropdown-item">New Customer?  Signup</Link></li>
                 <li><hr className="dropdown-divider"/></li>
                 <li><Link to='/profile' className="dropdown-item">My Profile</Link></li>
                 <li><Link to='/gift' className="dropdown-item">Orders</Link></li>
