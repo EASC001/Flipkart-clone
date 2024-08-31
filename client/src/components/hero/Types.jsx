@@ -31,6 +31,24 @@ import add9 from '../images/add9.webp'
 import add10 from '../images/add10.webp'
 import add11 from '../images/add11.webp'
 import add12 from '../images/add12.webp'
+import add13 from '../images/add13.webp'
+import add14 from '../images/add14.webp'
+import add15 from '../images/add15.webp'
+import add16 from '../images/add16.webp'
+import add17 from '../images/add17.webp'
+import add18 from '../images/add18.webp'
+import add19 from '../images/add19.webp'
+import add20 from '../images/add20.webp'
+import add21 from '../images/add21.webp'
+import add22 from '../images/add22.webp'
+import add23 from '../images/add23.webp'
+import add24 from '../images/add24.webp'
+import add25 from '../images/add25.webp'
+import add26 from '../images/add26.webp'
+import add27 from '../images/add27.webp'
+import add28 from '../images/add28.webp'
+import add29 from '../images/add29.webp'
+import add30 from '../images/add30.webp'
 
 
 export const Types = () => {
@@ -155,6 +173,78 @@ export const Types = () => {
         </div>
         <div className="col-4">
         <img src={add12} alt="" className="d-block  w-100" />
+        </div>
+      </div>
+    </div>
+    <div className="container-fluid mt-3 ">
+      <div className="row g-2">
+        <div className="col-4">
+            <img src={add13} alt=""  className="d-block  w-100" />
+        </div>
+        <div className="col-4">
+        <img src={add14} alt="" className="d-block add  w-100 "/>
+        </div>
+        <div className="col-4">
+        <img src={add15} alt="" className="d-block add  w-100"  />
+        </div>
+      </div>
+      <div className="row mt-2 g-2">
+        <div className="col-4 ">
+        <img src={add16} alt=""  className="d-block  w-100 "/>
+        </div>
+        <div className="col-4 ">
+        <img src={add17} alt="" className="d-block  w-100"/>
+        </div>
+        <div className="col-4">
+        <img src={add18} alt="" className="d-block  w-100" />
+        </div>
+      </div>
+    </div>
+    <div className="container-fluid mt-3 ">
+      <div className="row g-2">
+        <div className="col-4">
+            <img src={add19} alt=""  className="d-block  w-100" />
+        </div>
+        <div className="col-4">
+        <img src={add20} alt="" className="d-block add  w-100 "/>
+        </div>
+        <div className="col-4">
+        <img src={add21} alt="" className="d-block add  w-100"  />
+        </div>
+      </div>
+      <div className="row mt-2 g-2">
+        <div className="col-4 ">
+        <img src={add22} alt=""  className="d-block  w-100 "/>
+        </div>
+        <div className="col-4 ">
+        <img src={add23} alt="" className="d-block  w-100"/>
+        </div>
+        <div className="col-4">
+        <img src={add24} alt="" className="d-block  w-100" />
+        </div>
+      </div>
+    </div>
+    <div className="container-fluid mt-3 ">
+      <div className="row g-2">
+        <div className="col-4">
+            <img src={add25} alt=""  className="d-block  w-100" />
+        </div>
+        <div className="col-4">
+        <img src={add26} alt="" className="d-block add  w-100 "/>
+        </div>
+        <div className="col-4">
+        <img src={add27} alt="" className="d-block add  w-100"  />
+        </div>
+      </div>
+      <div className="row mt-2 g-2">
+        <div className="col-4 ">
+        <img src={add28} alt=""  className="d-block  w-100 "/>
+        </div>
+        <div className="col-4 ">
+        <img src={add29} alt="" className="d-block  w-100"/>
+        </div>
+        <div className="col-4">
+        <img src={add30} alt="" className="d-block  w-100" />
         </div>
       </div>
     </div>
