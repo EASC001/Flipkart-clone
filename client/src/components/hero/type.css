@@ -17,13 +17,13 @@
 .container-img{
     display: flex;
     justify-content: space-around;
-    gap: 30px;   
+    gap: 50px;   
 }
 
 .container-img img{
     
-    height: 200px;
-    width: 200px;
+    /* height: 200px;
+    width: 200px; */
     padding: 12px;
     
 }
