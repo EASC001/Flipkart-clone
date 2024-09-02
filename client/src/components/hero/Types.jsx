@@ -13,12 +13,12 @@ import banner2 from '../images/banner2.webp'
 import banner3 from '../images/banner3.webp'
 import banner4 from '../images/banner4.webp'
 import banner5 from '../images/banner5.webp'
-import airpods from '../images/airpods.jpg'
-import phone from '../images/phone.jpg'
-import shaver from '../images/shaver.jpg'
-import watch from '../images/watch.webp' 
-import tv from '../images/tv.jpg'
-import printer from '../images/printer.jpg'
+import airpods from '../images/airpods2.webp'
+import powerbank from '../images/powerbank.webp'
+import watch from '../images/smartwatch.webp'
+import bluetooth from '../images/headphone.webp' 
+import wash from '../images/wash.webp'
+import fridge from '../images/fridge.webp'
 import add1 from '../images/add1.webp'
 import add2 from '../images/add2.webp'
 import add3 from '../images/add3.webp'
@@ -49,6 +49,13 @@ import add27 from '../images/add27.webp'
 import add28 from '../images/add28.webp'
 import add29 from '../images/add29.webp'
 import add30 from '../images/add30.webp'
+import phone1 from '../images_2/infinix gt.webp'
+import phone2 from '../images_2/moto.webp'
+import phone3 from '../images_2/nothing.webp'
+import phone4 from '../images_2/poco.webp'
+import phone5 from '../images_2/realme p1.webp'
+import phone6 from '../images_2/realme.webp'
+
 
 
 export const Types = () => {
@@ -82,9 +89,7 @@ export const Types = () => {
         <div className="carousel-item active">
           <img src={banner1} alt="Los Angeles" className="d-block w-100"/>
         </div>
-        <div className="carousel-item">
-          <img src={banner2} alt="Chicago" className="d-block w-100"/>
-        </div>
+       
         <div className="carousel-item">
           <img src={banner3} alt="New York" className="d-block w-100"/>
         </div>
@@ -93,6 +98,9 @@ export const Types = () => {
         </div>
         <div className="carousel-item">
           <img src={banner5} alt="New York" className="d-block w-100"/>
+        </div>
+        <div className="carousel-item">
+          <img src={banner2} alt="Chicago" className="d-block w-100"/>
         </div>
       </div>
     
@@ -105,27 +113,27 @@ export const Types = () => {
       </button>
     </div>
     </div>
-    <div className="pro mt-3">
-    <h2 className="text-center"><b>Best of Electronics</b></h2>
-    <div className="container-img container">
+    <div className="pro mt-5">
+    <h2 className="text-center"><b>Best Deals on Big Bachat</b></h2>
+    <div className="container-img container-fluid mt-5">
         <a href=""><img src={airpods}  className="d-block" alt=""/>
         <p className="type">Airpods</p>
         <p className="price"><b>From ₹1,299</b></p></a>
-        <a href=""><img src={phone}   className="d-block" alt=""/>
-         <p className="type">Smart phone</p>
-         <p className="price"><b>From ₹59,999</b></p></a>
-        <a href=""><img src={shaver} className="d-block" alt=""/>
-        <p className="type">Shaver</p>
-        <p className="price"><b>From ₹599</b></p></a>
+        <a href=""><img src={fridge}   className="d-block" alt=""/>
+         <p className="type">Fridge</p>
+         <p className="price"><b>From ₹12999</b></p></a>
+        <a href=""><img src={wash} className="d-block" alt=""/>
+        <p className="type">Washing Machine</p>
+        <p className="price"><b>From ₹7999</b></p></a>
         <a href=""><img src={watch}  className="d-block" alt=""/>
         <p className="type">Smart watch</p>
-        <p className="price"><b>From ₹2,999</b></p></a>
-        <a href=""><img src={tv}   className="d-block " alt=""/>
-        <p className="type">Smart TV</p>
-        <p className="price"><b>From ₹30,999</b></p></a>
-        <a href=""><img src={printer}  className="d-block" alt=""/>
-        <p className="type">Printer</p>
-        <p className="price"><b>From ₹8,999</b></p></a>
+        <p className="price"><b>From ₹999</b></p></a>
+        <a href=""><img src={bluetooth}   className="d-block " alt=""/>
+        <p className="type">Bluetooth</p>
+        <p className="price"><b>From ₹1,299</b></p></a>
+        <a href=""><img src={powerbank}  className="d-block" alt=""/>
+        <p className="type">Power Bank</p>
+        <p className="price"><b>From ₹899</b></p></a>
     </div>
     </div>
     <div className="container-fluid mt-4 ">
@@ -152,6 +160,7 @@ export const Types = () => {
         </div>
       </div>
     </div>
+    
     <div className="container-fluid mt-3 ">
       <div className="row g-2">
         <div className="col-4">
@@ -164,6 +173,31 @@ export const Types = () => {
         <img src={add9} alt="" className="d-block add  w-100"  />
         </div>
       </div>
+    <div className="pro mt-5">
+    <h2 className="text-center"><b>Best Deals on  SmartPhones</b></h2>
+    <div className="container-img container-fluid mt-5">
+       
+        <a href=""><img src={phone1}  className="d-block" alt=""/>
+        <p className="type">Infinix GT 20 Pro</p>
+        <p className="price"><b>From ₹22,999</b></p></a>
+       
+        <a href=""><img src={phone2}   className="d-block" alt=""/>
+         <p className="type">Moto Edge 50</p>
+         <p className="price"><b>From ₹21,999</b></p></a>
+        <a href=""><img src={phone3} className="d-block" alt=""/>
+        <p className="type">Nothing 2a</p>
+        <p className="price"><b>From ₹25,999</b></p></a>
+        <a href=""><img src={phone4}  className="d-block" alt=""/>
+        <p className="type">Poco M6 Pro</p>
+        <p className="price"><b>From ₹24,999</b></p></a>
+        <a href=""><img src={phone5}   className="d-block " alt=""/>
+        <p className="type">Realme P1 Pro</p>
+        <p className="price"><b>From ₹40,999</b></p></a>
+        <a href=""><img src={phone6}  className="d-block" alt=""/>
+        <p className="type">Realme P1</p>
+        <p className="price"><b>From ₹30,999</b></p></a>
+    </div>
+    </div>
       <div className="row mt-2 g-2">
         <div className="col-4 ">
         <img src={add10} alt=""  className="d-block  w-100 "/>
