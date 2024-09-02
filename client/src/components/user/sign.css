@@ -73,7 +73,7 @@
     margin-bottom: 50px;
     width: 100%;
     color: #000;
-    font-size: inherit;
+    font-size: 20px;
     background: #fff;
     border: none;
     border-bottom: 1px solid #e0e0e0;
@@ -99,7 +99,7 @@
 }
 .input-form:focus {
   padding-bottom: 6px;
-  font-weight: 700;
+  /* font-weight: 700; */
   border-width: 3px;
   border-image: linear-gradient(to right, #2874f0, #2874f0);
   border-image-slice: 1;
