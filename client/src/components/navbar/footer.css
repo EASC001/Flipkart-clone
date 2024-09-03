@@ -10,6 +10,7 @@
     .footer2{
         background-color:black;
         display: flex;
+        gap: 40px;
         height: 200px;
         padding: 10px;
     
@@ -25,7 +26,7 @@
     }
     .policy ul li{
         list-style: none;
-        border-right: 1px solid white;
+        
     }
     .mail ul li{
         list-style: none;
@@ -45,3 +46,4 @@
     .footer p{
         font-size: 13px;
     }
+ 
