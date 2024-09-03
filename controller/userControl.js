@@ -1,33 +1,24 @@
 import { User } from "../model/userModel.js";
-import bcrypt from "bcryptjs";
 import { sendOtp, generateOtp } from "../middleware/sendotp.js";
 import jwt from "jsonwebtoken";
-import sendMail from "../middleware/sendMail.js";
+
 
 //new user registration
 export const Registeruser = async (req, res) => {
   try {
     console.log(req.body);
-    const {name,email,password,contact } = req.body;
-    let user = await User.findOne({contact});
-    if (user) {
-      return res.status(400).json({
-        message: "User Already Register",
-      });
-    }
+    const {contact } = req.body;
     //otp generate and send to mobile number
     const otp = generateOtp();
     await sendOtp(contact, otp);
 
-    user = { contact };
-    console.log(user)
     const activationToken = jwt.sign(
-      {name,email,password,contact, otp },
+      {contact, otp },
       process.env.SECRET,
       { expiresIn: "5m" }
     );
     await res.status(200).json({
-      message: "Registration successful, OTP sent to your phone",
+      otp,
       activationToken,
     });
   } catch (error) {
@@ -48,7 +39,7 @@ export const verifyuser = async (req, res) => {
         message: "User not found",
       });
     }
-    const {name,email,password,contact, otp: tokenOtp } = decodedToken;
+    const {contact, otp: tokenOtp } = decodedToken;
     // Check if the OTP matches
     if (tokenOtp !== otp) {
       return res.status(400).json({
@@ -57,7 +48,7 @@ export const verifyuser = async (req, res) => {
     }
 
     // Update the user's verification status
-    let user = new User({name,email,password,contact, isVerified: true });
+    let user = new User({contact, isVerified: true });
     await user.save();
 
     return res.status(200).json({

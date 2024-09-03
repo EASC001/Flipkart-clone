@@ -24,31 +24,25 @@ app.use(express.json());
 import Register from "./routes/userRoutes.js"
 import { User } from "./model/userModel.js";
 import { generateOtp, sendOtp } from "./middleware/sendotp.js";
+import jwt from "jsonwebtoken";
 
 app.use('/api', Register)
 
 app.post('/api/registration', async (req, res) => {
     try {
         const {contact } = req.body;
-        let user = await User.findOne({contact});
-        if (user) {
-          return res.status(400).json({
-            message: "User Already Register",
-          });
-        }
+
         //otp generate and send to mobile number
         const otp = generateOtp();
         await sendOtp(contact, otp);
-    
-        user = { contact };
-        console.log(user)
+  
         const activationToken = jwt.sign(
           {contact, otp },
           process.env.SECRET,
           { expiresIn: "5m" }
         );
         res.status(200).json({
-            message: "Registration successful, OTP sent to your phone",
+            otp,
             activationToken,
         });
       } catch (error) {
@@ -57,7 +51,40 @@ app.post('/api/registration', async (req, res) => {
         });
       }
 })
+app.post('/api/signup', async(req,res)=>{
+  try {
+    const { otp, activationToken } = req.body;
 
+    // Verify the activation token
+    const decodedToken = jwt.verify(activationToken, process.env.SECRET);
+
+    if (!decodedToken) {
+      return res.status(404).json({
+        message: "User not found",
+      });
+    }
+    const {contact, otp: tokenOtp } = decodedToken;
+    // Check if the OTP matches
+    if (tokenOtp !== otp) {
+      return res.status(400).json({
+        message: "Invalid OTP",
+      });
+    }
+
+    // Update the user's verification status
+    let user = new User({contact, isVerified: true });
+    await user.save();
+
+    return res.status(200).json({
+      message: "User registration successful",
+    });
+  } catch (error) {
+    // Handle errors (invalid token, etc.)
+    return res.status(500).json({
+      message: error.message,
+    });
+  }
+})
 app.get('/api/', async (req, res) => {
     try {
         const users = await User.find({})

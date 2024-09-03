@@ -2,16 +2,12 @@ import React, { useEffect, useState } from 'react'
 import "./sign.css"
 import { Link } from 'react-router-dom'
 import axios from 'axios'
+import { useNavigate } from 'react-router-dom'
 
 const Sign = () => {
     const [number, setNumber] = useState('')
+    const navigate=useNavigate()
     useEffect(() => {
-        // axios({ 
-        //     method: 'get',
-        //     url: 'http://localhost:3010/api'
-        // })
-        //     .then(res => res.json())
-        //     .then(data => setNumber(data));
         axios.get('http://localhost:3010/api')
             .then(response => {
                 console.log(response.data)
@@ -29,7 +25,14 @@ const Sign = () => {
                     }
                 }
             )
+            //destructure to store session storage
+            const { otp, activationToken } = response.data;
+
+            //storing session storage for otp verification
+            sessionStorage.setItem('contact', contact);
+            sessionStorage.setItem('activationToken', activationToken);
             setNumber(response)
+            navigate("/otp")
         } catch (error) {
             console.error("error", error)
         }
@@ -50,7 +53,7 @@ const Sign = () => {
                         By continuing, you agree to Flipkart's <a className='link-offset-2 link-underline link-underline-opacity-0' href="#">Terms of Use</a> and <a className='link-offset-2 link-underline link-underline-opacity-0' href="#">Privacy Policy</a>
                     </p>
                     <div className='d-grid gap-2'>
-                        <button className='sign-button' onClick={sign}><Link to="/">CONTINUE</Link></button>
+                        <button className='sign-button' onClick={sign}><Link to="/otp">CONTINUE</Link></button>
                         <button className='log-button'><Link to="/login">Existing User? Log in</Link></button>
                     </div>
                 </div>
