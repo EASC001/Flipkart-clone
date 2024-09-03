@@ -9,19 +9,12 @@
 #n{
     font-size:large;
     margin-left: 180px;
-    font-weight:normal;
-    
-  
-    
+    font-weight:normal;  
 }
 .content{
     
-    width: 550px;
-    
-   
-    
+    width: 550px;    
 }
-
 .fill {
     display: flex;
     justify-content: center;
@@ -31,7 +24,7 @@
   }
   
   .input-otp {
-    width: 25px;
+    width: 100%;
     border: none;
     border-bottom: 3px solid gainsboro;
     margin: 0 10px;

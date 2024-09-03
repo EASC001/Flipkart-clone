@@ -1,7 +1,6 @@
 
 import './sign.css'
 import { Link } from 'react-router-dom'
-
 const Login = () => {
   return (
 <div className='window'>
@@ -27,5 +26,4 @@ const Login = () => {
         </div>
   )
 }
-
 export default Login

@@ -8,19 +8,15 @@ import { CgProfile } from "react-icons/cg";
 import { PiShoppingCart } from "react-icons/pi";
 import { CiShop } from "react-icons/ci";
 
-
-
 export const Navbar = () => {
   return (
   <> 
   <div className="container-fluid header ">
     <nav className='d-flex align-items-center p-2 bg-light'>
-        <img src={logo} alt="" height={30} className='' />
+        <Link to='/'><img src={logo} alt="" height={30} className='' /></Link>
         <div className="input ">
           <input type="text" placeholder='Search for Products,Brands and More...' />
           <span className='search'><CiSearch/></span>
-       
-          
         </div>
         <div className="buttons d-flex ms-5 gap-5 align-items-center">
         <div className="dropdown">
