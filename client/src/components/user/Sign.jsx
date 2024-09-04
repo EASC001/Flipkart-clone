@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 // import React from 'react'
-=======
-import React, { useEffect, useState } from 'react'
->>>>>>> 1aa4076bd8940fd05bbd4782c1f08b77fb664f1c
 import "./sign.css"
 import { Link } from 'react-router-dom'
 import axios from 'axios'
