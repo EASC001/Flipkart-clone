@@ -1,7 +1,7 @@
 // import React from 'react'
 import { Link } from 'react-router-dom'
 import "./otp.css";
-import { useEffect, useState } from 'react';
+import {  useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
@@ -45,8 +45,8 @@ const Otp = (props) => {
               </div>
             </div>
             <div className="content">
-              <p id="p">Please enter the OTP sent to </p>
-              <p id="n">98765432109</p>
+              <p id="p">Please enter the OTP sent to your mobile number</p>
+              {/* <p id="n">98765432109</p> */}
               <div className="container fill">
                 <div id="inputs" className="inputs">
                   <input className="input-otp" type="text" value={otp} onChange={(e)=>setOtp(e.target.value)}/>
