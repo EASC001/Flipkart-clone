@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+// import React from 'react'
+=======
 import React, { useEffect, useState } from 'react'
+>>>>>>> 1aa4076bd8940fd05bbd4782c1f08b77fb664f1c
 import "./sign.css"
 import { Link } from 'react-router-dom'
 import axios from 'axios'
@@ -42,7 +46,7 @@ const Sign = () => {
             <div className='parent-contain'>
                 <div className='welcome'>
                     <div className='sign'>
-                        <h2>Looks like you're new here!</h2>
+                        <h2>Looks like you re new here!</h2>
                         <h5>Sign up with your mobile number to get started</h5>
                     </div>
                 </div>
@@ -50,7 +54,7 @@ const Sign = () => {
                     <input className='input-form' type="text" value={number} onChange={(e) => setNumber(e.target.value)} placeholder='Enter Mobile Number' />
                     <label className='form__label' htmlFor="">Enter Mobile Number</label>
                     <p className='' style={{ color: '#878787' }}>
-                        By continuing, you agree to Flipkart's <a className='link-offset-2 link-underline link-underline-opacity-0' href="#">Terms of Use</a> and <a className='link-offset-2 link-underline link-underline-opacity-0' href="#">Privacy Policy</a>
+                        By continuing, you agree to Flipkarts <a className='link-offset-2 link-underline link-underline-opacity-0' href="#">Terms of Use</a> and <a className='link-offset-2 link-underline link-underline-opacity-0' href="#">Privacy Policy</a>
                     </p>
                     <div className='d-grid gap-2'>
                         <button className='sign-button' onClick={sign}><Link to="/otp">CONTINUE</Link></button>
