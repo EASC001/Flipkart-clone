@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
-const Otp = () => {
+const Otp = (props) => {
   const [otp,setOtp]=useState('')
   const navigate=useNavigate()
   const verify = async (e) => {
@@ -13,8 +13,9 @@ const Otp = () => {
       e.preventDefault();
   
       const OTP = Number(otp); // Ensure otp is correctly defined
-      const activationToken = sessionStorage.getItem('activationToken'); // Assuming you store it in sessionStorage
-      console.log(activationToken)
+      // const activationToken = sessionStorage.getItem('activationToken'); // Assuming you store it in sessionStorage
+      // console.log(activationToken)
+      const activationToken=props.response
   
       const response = await axios.post('http://localhost:3010/api/signup', 
         { otp: OTP, activationToken },
@@ -26,7 +27,7 @@ const Otp = () => {
       );
       sessionStorage.setItem('activationToken', response.data.decodedToken);
       setOtp(response.data); // Adjust based on your actual state management
-      navigate('/');
+      navigate('/profile');
     } catch (error) {
       console.error('Error:', error);
     }
