@@ -3,7 +3,7 @@ import './footer.css'
 const Footer = () => {
   return (
     <div>
-    <footer className='mt-5 container-fluid ms-3'>
+    <footer className='mt-5 container-fluid ms-1'>
     <div>
       <div className="footer">
         <h5>Flipkart: The One-stop Shopping Destination</h5>
@@ -280,26 +280,26 @@ const Footer = () => {
       <div className="footer2">
         <div className="about">
           <h5 style={{color: 'gray' ,fontSize:' 15px'}}>ABOUT</h5>
-          <ul className="text-white" style={{fontSize: '10px'}}>
+          <ul className="text-white" style={{fontSize: '12px',fontWeight:'bold'}}>
             <li>Contact Us</li>
             <li>About Us</li>
             <li>Careers</li>
-            <li>Flipkart Stories</li>
+            <li>flipkart Stories</li>
             <li>Press</li>
             <li>Corporate Information</li>
           </ul>
         </div>
         <div className="group">
-        <h5 style={{color: 'gray' ,fontSize:' 15px'}}>ABOUT</h5>
-        <ul className="text-white" style={{fontSize: '10px'}}>
+        <h5 style={{color: 'gray' ,fontSize:' 15px'}}>GROUP COMPANIES</h5>
+        <ul className="text-white" style={{fontSize: '12px',fontWeight:'bold'}}>
             <li>Myntra</li>
             <li>Cleartrip</li>
             <li>Shopsy</li>
           </ul>
         </div>
         <div className="help">
-        <h5 style={{color: 'gray' ,fontSize:' 15px'}}>ABOUT</h5>
-        <ul className="text-white" style={{fontSize: '10px'}}>
+        <h5 style={{color: 'gray' ,fontSize:' 15px'}}>HELP</h5>
+        <ul className="text-white" style={{fontSize: '12px',fontWeight:'bold'}}>
             <li>Payments</li>
             <li>Shipping</li>
             <li>Cancellation & Returns</li>
@@ -308,8 +308,8 @@ const Footer = () => {
           </ul>
         </div>
         <div className="policy">
-        <h5 style={{color: 'gray' ,fontSize:' 15px'}}>ABOUT</h5>
-        <ul className="text-white" style={{fontSize: '10px'}}>
+        <h5 style={{color: 'gray' ,fontSize:' 15px'}}>CONSUMER POLICY</h5>
+        <ul className="text-white" style={{fontSize: '12px',fontWeight:'bold'}}>
             <li>Cancellation & Returm</li>
             <li>Terms of Use</li>
             <li>Security</li>
@@ -320,8 +320,8 @@ const Footer = () => {
           </ul>
         </div>
         <div className="mail">
-        <h5 style={{color: 'gray' ,fontSize:' 15px'}}>ABOUT</h5>
-        <ul className="text-white" style={{fontSize: '10px'}}>
+        <h5 style={{color: 'gray' ,fontSize:' 15px'}}>Help Us</h5>
+        <ul className="text-white" style={{fontSize: '12px',fontWeight:'bold'}}>
             <li>Flipkart Internet Private Limited</li>
             <li>Buliding Alyssa,Begonia &</li>
             <li>Clove Embassy Tech Village,</li>
@@ -331,8 +331,8 @@ const Footer = () => {
           </ul>
         </div>
         <div className="address">
-        <h5 style={{color: 'gray' ,fontSize:' 15px'}}>ABOUT</h5>
-          <ul className="text-white" style={{fontSize: '10px'}}>
+        <h5 style={{color: 'gray' ,fontSize:' 15px'}}>Registered Office Adrress</h5>
+          <ul className="text-white" style={{fontSize: '12px',fontWeight:'bold'}}>
             <li>Flipkart Internet Private Limited</li>
             <li>Buliding Alyssa,Begonia &</li>
             <li>Clove Embassy Tech Village,</li>
