@@ -46,4 +46,11 @@
     .footer p{
         font-size: 13px;
     }
+    .bottom {
+        background-color: black;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+       
+    }
  

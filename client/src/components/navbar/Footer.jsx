@@ -1,4 +1,5 @@
 import './footer.css'
+import footer from '../images_2/footer.jpeg'
 
 const Footer = () => {
   return (
@@ -320,7 +321,7 @@ const Footer = () => {
           </ul>
         </div>
         <div className="mail">
-        <h5 style={{color: 'gray' ,fontSize:' 15px'}}>Help Us</h5>
+        <h5 style={{color: 'gray' ,fontSize:' 15px'}}>Mail Us</h5>
         <ul className="text-white" style={{fontSize: '12px',fontWeight:'bold'}}>
             <li>Flipkart Internet Private Limited</li>
             <li>Buliding Alyssa,Begonia &</li>
@@ -343,7 +344,17 @@ const Footer = () => {
             <li>Telephone : 044-45614700/044-67415800</li>
           </ul>
         </div>
+       
       </div>
+      
+      <div className="bottom">
+          <p>Become a Seller</p>
+          <p>Advertise</p>
+          <p>Gifts Cards</p>
+          <p>Help Center</p>
+          <p>2007-2024 Flipkart.com</p>
+          <img src={footer} alt="" className='d-block' height={'18px'}/>
+        </div>
     </div>
   </footer>
       

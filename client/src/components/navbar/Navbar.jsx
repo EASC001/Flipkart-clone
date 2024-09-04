@@ -22,8 +22,10 @@ export const Navbar = () => {
         <div className="dropdown">
          
           <button className='border border-0 btn  dropdown-toggle' data-bs-toggle="dropdown"> <span className='pe-2'><CgProfile/></span>Login</button>
+          {/* <button className='border border-0 btn  dropdown-toggle' data-bs-toggle="dropdown"> <span className='pe-2'><CgProfile/></span>Login</button> */}
             <ul className="dropdown-menu">
-                <li><Link to='/signup' className="dropdown-item">New Customer?  Signup</Link></li>
+                <li><Link to='/signup' className="dropdown-item">Login / SignUp</Link></li>
+                {/* <li><Link to='/signup' className="dropdown-item">New Customer?  Signup</Link></li> */}
                 <li><hr className="dropdown-divider"/></li>
                 <li><Link to='/profile' className="dropdown-item">My Profile</Link></li>
                 <li><Link to='/gift' className="dropdown-item">Orders</Link></li>

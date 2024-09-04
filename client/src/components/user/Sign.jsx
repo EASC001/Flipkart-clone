@@ -1,12 +1,8 @@
-<<<<<<< HEAD
-// import React from 'react'
-=======
-import React, { useEffect, useState } from 'react'
->>>>>>> 1aa4076bd8940fd05bbd4782c1f08b77fb664f1c
 import "./sign.css"
 import { Link } from 'react-router-dom'
 import axios from 'axios'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate} from 'react-router-dom'
+import { useState,useEffect } from "react"
 
 const Sign = () => {
     const [number, setNumber] = useState('')
@@ -30,7 +26,7 @@ const Sign = () => {
                 }
             )
             //destructure to store session storage
-            const { otp, activationToken } = response.data;
+            const { activationToken } = response.data;
 
             //storing session storage for otp verification
             sessionStorage.setItem('contact', contact);
