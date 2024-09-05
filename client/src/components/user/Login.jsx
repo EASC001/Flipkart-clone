@@ -1,7 +1,9 @@
 
+import { useState } from 'react'
 import './sign.css'
 import { Link } from 'react-router-dom'
 const Login = () => {
+    const [user,setUser]=useState()
   return (
 <div className='window'>
             <div className='parent-contain'>

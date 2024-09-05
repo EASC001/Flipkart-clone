@@ -1,5 +1,5 @@
 // import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import "./otp.css";
 import {  useState } from 'react';
 import axios from 'axios';
@@ -8,15 +8,15 @@ import { useNavigate } from 'react-router-dom';
 const Otp = (props) => {
   const [otp,setOtp]=useState('')
   const navigate=useNavigate()
+  const location=useLocation()
+  const {activationToken}=location.state || {}
   const verify = async (e) => {
     try {
       e.preventDefault();
   
       const OTP = Number(otp); // Ensure otp is correctly defined
       // const activationToken = sessionStorage.getItem('activationToken'); // Assuming you store it in sessionStorage
-      // console.log(activationToken)
-      const activationToken=props.response
-  
+      // console.log(activationToken)  
       const response = await axios.post('http://localhost:3010/api/signup', 
         { otp: OTP, activationToken },
         {
