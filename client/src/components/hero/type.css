@@ -43,3 +43,38 @@
    text-align: center;
 }
 
+.footer{
+    background-color: rgb(240, 238, 238);
+    }
+    .grid-container {
+        display:grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 20px;
+      }
+      .grid-item {
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 20px;
+        text-align: center;
+      }
+    .image1{
+      display: grid;
+      width: 500px;
+      gap: 20px;
+      grid-template-columns: 200px 200px;
+    }
+    .grid-item h4{
+       color: rgb(37, 37, 37)
+    
+    }
+    .grid-item h3{
+    color: rgb(1, 63, 1);
+    }
+    
+    *{
+      padding: 0px;
+      margin: 0px;
+    }
+    .img1{
+      height: 200px;
+      width: 200px;
+    }
