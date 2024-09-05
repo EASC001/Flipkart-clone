@@ -14,7 +14,7 @@ export const Navbar = () => {
   <div className="container-fluid header ">
     <nav className='d-flex align-items-center p-2 bg-light'>
         <Link to='/'><img src={logo} alt="" height={30} className='' /></Link>
-        <div className="input ">
+        <div className="input">
           <input type="text" placeholder='Search for Products,Brands and More...' />
           <span className='search'><CiSearch/></span>
         </div>
@@ -45,10 +45,7 @@ export const Navbar = () => {
         </div>
     </nav>
   </div>
-
  
-
-
   </>
   )
 }
