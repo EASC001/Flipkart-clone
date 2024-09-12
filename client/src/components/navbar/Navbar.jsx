@@ -28,9 +28,9 @@ export const Navbar = () => {
                 {/* <li><Link to='/signup' className="dropdown-item">New Customer?  Signup</Link></li> */}
                 <li><hr className="dropdown-divider"/></li>
                 <li><Link to='/profile' className="dropdown-item">My Profile</Link></li>
-                <li><Link to='/gift' className="dropdown-item">Orders</Link></li>
-                <li><Link to='/gift' className="dropdown-item">Whislist</Link></li>
-                <li><Link to='/gift' className="dropdown-item">Rewards</Link></li>
+                <li><Link to='/' className="dropdown-item">Orders</Link></li>
+                <li><Link to='/' className="dropdown-item">Whislist</Link></li>
+                <li><Link to='/' className="dropdown-item">Rewards</Link></li>
                 <li><Link to='/gift' className="dropdown-item">Gift Cards</Link></li>
             </ul>
         </div>

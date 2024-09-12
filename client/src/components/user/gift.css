@@ -1,0 +1,31 @@
+*{
+   
+    margin: 0px;
+    padding: 0px;
+}
+.gift img{
+    height: 400px;
+    width: 100%;
+    
+}
+.port img{
+    height: 200px;
+    width: 100%;
+}
+.port h1{
+    text-align: center;
+}
+.birth img{
+    height: 300px;
+    width: 100%;
+}
+
+.day {
+    display: flex;
+}
+.down p{
+    font-size: small;
+}
+.color{
+    background-color: white;
+}
