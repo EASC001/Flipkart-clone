@@ -1,8 +1,7 @@
 import { User } from "../model/userModel.js";
 import { sendOtp, generateOtp } from "../middleware/sendotp.js";
-import sendMail from '../middleware/sendMail.js'
+import sendMail from "../middleware/sendMail.js";
 import jwt from "jsonwebtoken";
-
 
 //new user registration
 export const Registeruser = async (req, res) => {
@@ -13,16 +12,15 @@ export const Registeruser = async (req, res) => {
     const otp = generateOtp();
     await sendOtp(contact, otp);
 
-    const activationToken = jwt.sign(
-      { contact, otp },
-      process.env.SECRET,
-      { expiresIn: "5m" }
-    );
+    const activationToken = jwt.sign({ contact, otp }, process.env.SECRET, {
+      expiresIn: "5m",
+    });
     await res.status(200).json({
       otp,
       activationToken,
     });
   } catch (error) {
+    console.error(error);
     return res.status(500).json({
       message: error.message,
     });
@@ -64,51 +62,132 @@ export const verifyuser = async (req, res) => {
 };
 export const LoginUser = async (req, res) => {
   try {
-    const { email, contact } = req.body
-    const user = await User.findById({ _id: req.params.id })
+    const { email, contact } = req.body;
+
+    if (!email && !contact) {
+      return res.status(400).json({
+        message: "Please provide either an Email ID or a Mobile number",
+      });
+    }
+
+    // Find the user based on either email or contact
+    let user;
+    if (email) {
+      user = await User.findOne({ email });
+    } else if (contact) {
+      user = await User.findOne({ contact });
+    }
+
     if (!user) {
       return res.status(400).json({
-        message: "Please enter valid Email ID / Mobile number"
-      })
+        message: "Invalid Email ID or Mobile number",
+      });
     }
-    const token = jwt.sign({ _id: req.params.id }, process.env.SECRET, {
-      expiresIn: "15d",
-    });
+    let otp;
     if (contact) {
-      const otp = generateOtp();
+      otp = generateOtp();
       await sendOtp(contact, otp);
-    }
-    if (email) {
-      const otp = generateOtp();
-      const message = `please verify your account using otp your otp is ${otp}`;
+    } else if (email) {
+      otp = generateOtp();
+      const message = `Please verify your account using OTP. Your OTP is ${otp}`;
       await sendMail(email, "Welcome to our website", message);
     }
+    const token = jwt.sign(
+      { _id: user._id, email, contact,otp },
+      process.env.SECRET,
+      {
+        expiresIn: "15d",
+      }
+    );
+
+    const userDetails = user.toObject();
     return res.status(200).json({
       token,
-      user
-    })
+      otp, // Return OTP only if necessary for the client
+      user: userDetails,
+    });
   } catch (error) {
     return res.status(500).json({
-      message: error.message
-    })
+      message: error.message,
+    });
   }
-}
+};
+export const verifyOtp = async (req, res) => {
+  try {
+    const { otp, token } = req.body;
+
+    // if (!otp) {
+    //   return res.status(400).json({
+    //     message: "OTP and token are required",
+    //   });
+    // }
+
+    // Verify the token
+    const decodedToken = jwt.verify(token, process.env.SECRET);
+    if (!decodedToken) {
+      return res.status(401).json({
+        message: "Invalid token",
+      });
+    }
+
+    // Find the user based on decoded token
+    const { email, contact, otp: tokenOtp } = decodedToken;
+    let user;
+    if (email) {
+      user = await User.findOne({ email });
+    } else if (contact) {
+      user = await User.findOne({ contact });
+    }
+
+    if (!user) {
+      return res.status(404).json({
+        message: "User not found",
+      });
+    }
+
+    // Check if the OTP matches
+    if (tokenOtp !== otp) {
+      return res.status(400).json({
+        message: "Invalid OTP",
+      });
+    }
+
+    // Clear OTP after successful verification
+    // tokenOtp = undefined;
+    // await user.save();
+
+    // Generate a new token or proceed with login
+    const newToken = jwt.sign({ _id: user._id }, process.env.SECRET, {
+      expiresIn: "15d",
+    });
+
+    return res.status(200).json({
+      token: newToken,
+      user: user.toObject(),
+      message: "Login successful",
+    });
+  } catch (error) {
+    return res.status(500).json({
+      message: error.message,
+    });
+  }
+};
 export const Profile = async (req, res) => {
   try {
-    const profile = await User.findById(req.params.id)
+    const profile = await User.findById(req.params.id);
 
     if (!profile) {
       return res.status(404).json({
-        message: "user is not found"
-      })
+        message: "user is not found",
+      });
     }
-    return res.json(profile)
+    return res.json(profile);
   } catch (error) {
     return res.status(500).json({
-      message: error.message
-    })
+      message: error.message,
+    });
   }
-}
+};
 export const UpdateProfile = async (req, res) => {
   try {
     const userupdate = await User.findByIdAndUpdate(
@@ -117,18 +196,18 @@ export const UpdateProfile = async (req, res) => {
         firstname: req.body.firstname,
         lastname: req.body.lastname,
         email: req.body.email,
-        contact: req.body.contact
+        contact: req.body.contact,
       },
       {
         new: true,
       }
-    )
+    );
     return res.status(200).json({
-      userupdate
-    })
+      userupdate,
+    });
   } catch (error) {
     return res.status(500).json({
-      message: error.message
-    })
+      message: error.message,
+    });
   }
-}
+};

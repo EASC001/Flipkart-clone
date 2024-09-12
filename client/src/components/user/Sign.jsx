@@ -1,23 +1,27 @@
+import React from "react"
 import "./sign.css"
 import { Link } from 'react-router-dom'
 import axios from 'axios'
 import { useNavigate} from 'react-router-dom'
 import { useState,useEffect } from "react"
+import {toast} from "react-toastify"
+
+
 
 const Sign = () => {
     const [number, setNumber] = useState('')
     const navigate=useNavigate()
     useEffect(() => {
-        axios.get('http://localhost:3010/api')
-            .then(response => {
-                console.log(response.data)
-            })
+        axios.get("http://localhost:3010/api/v1/admin")
+        .then((response) => {
+          console.log(response.data);
+        });
     }, []);
     const sign = async (e) => {
         try {
             e.preventDefault();
             const contact = String(number)
-            const response = await axios.post('http://localhost:3010/api/user/registration',
+            const response = await axios.post('http://localhost:3010/api/v1/user/registration',
                 { contact },
                 {
                     headers: {
@@ -32,6 +36,7 @@ const Sign = () => {
             sessionStorage.setItem('contact', contact);
             sessionStorage.setItem('activationToken', activationToken);
             setNumber(response)
+            toast.info("OTP send Your Mobile Number")
             navigate("/otp", {state:{activationToken}})
         } catch (error) {
             console.error("error", error)
