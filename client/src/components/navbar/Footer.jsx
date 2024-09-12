@@ -71,17 +71,12 @@ const Footer = () => {
             <li>Telephone : 044-45614700/044-67415800</li>
           </ul>
         </div>
-
+    
       </div>
 
-      <div className="bottom">
-        <p>Become a Seller</p>
-        <p>Advertise</p>
-        <p>Gifts Cards</p>
-        <p>Help Center</p>
-        <p>2007-2024 Flipkart.com</p>
-        <img src={footer} alt="" className='d-block' height={'18px'} />
-      </div>
+
+
+
     </div>
  
       

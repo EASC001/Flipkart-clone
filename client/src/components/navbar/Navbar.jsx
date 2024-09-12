@@ -57,6 +57,21 @@ export const Navbar = () => {
           </span>
         </div>
         <div className="buttons d-flex ms-5 gap-5 align-items-center">
+<<<<<<< HEAD
+        <div className="dropdown">
+         
+          <button className='border border-0 btn  dropdown-toggle' data-bs-toggle="dropdown"> <span className='pe-2'><CgProfile/></span>Login</button>
+          {/* <button className='border border-0 btn  dropdown-toggle' data-bs-toggle="dropdown"> <span className='pe-2'><CgProfile/></span>Login</button> */}
+            <ul className="dropdown-menu">
+                <li><Link to='/signup' className="dropdown-item">Login / SignUp</Link></li>
+                {/* <li><Link to='/signup' className="dropdown-item">New Customer?  Signup</Link></li> */}
+                <li><hr className="dropdown-divider"/></li>
+                <li><Link to='/profile' className="dropdown-item">My Profile</Link></li>
+                <li><Link to='/' className="dropdown-item">Orders</Link></li>
+                <li><Link to='/' className="dropdown-item">Whislist</Link></li>
+                <li><Link to='/' className="dropdown-item">Rewards</Link></li>
+                <li><Link to='/gift' className="dropdown-item">Gift Cards</Link></li>
+=======
           <div
             className="dropdown"
             ref={dropdownRef}
@@ -203,6 +218,7 @@ export const Navbar = () => {
                   </li>
                 </>
               )}
+>>>>>>> ca4ec025170ad6da366c181000a68889c6788db6
             </ul>
           </div>
           <div className="cart">

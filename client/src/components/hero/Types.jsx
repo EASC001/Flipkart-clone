@@ -58,7 +58,7 @@ import phone6 from '../images_2/realme.webp'
 import brush from '../images_2/brush.webp'
 import lip from '../images_2/lip.webp'
 import care from '../images_2/care1.webp'
-import make from '../images_2/makeup.jpeg'
+import make from '../images_2/lip2.webp'
 import grid from '../images_2/grid13.webp'
 
 
@@ -122,24 +122,24 @@ export const Types = () => {
     <div className="pro mt-5">
     <h2 className="text-center"><b>Best Deals on Big Bachat</b></h2>
     <div className="container-img container-fluid mt-5">
-        <a href=""><img src={airpods}  className="d-block" alt=""/>
+        <Link to="/airpods"><img src={airpods}  className="d-block"   alt=""/>
         <p className="type">Airpods</p>
-        <p className="price"><b>From ₹1,299</b></p></a>
-        <a href=""><img src={fridge}   className="d-block" alt=""/>
+        <p className="price"><b>From ₹1,299</b></p></Link>
+        <Link to="/fridge"><img src={fridge}   className="d-block" alt=""/>
          <p className="type">Fridge</p>
-         <p className="price"><b>From ₹12999</b></p></a>
-        <a href=""><img src={wash} className="d-block" alt=""/>
+         <p className="price"><b>From ₹12999</b></p></Link>
+        <Link to="/wash"><img src={wash} className="d-block" alt=""/>
         <p className="type">Washing Machine</p>
-        <p className="price"><b>From ₹7999</b></p></a>
-        <a href=""><img src={watch}  className="d-block" alt=""/>
+        <p className="price"><b>From ₹7999</b></p></Link>
+        <Link to="/watch"><img src={watch}  className="d-block" alt=""/>
         <p className="type">Smart watch</p>
-        <p className="price"><b>From ₹999</b></p></a>
-        <a href=""><img src={bluetooth}   className="d-block " alt=""/>
+        <p className="price"><b>From ₹999</b></p></Link>
+        <Link to="/bluetooth"><img src={bluetooth}   className="d-block " alt=""/>
         <p className="type">Bluetooth</p>
-        <p className="price"><b>From ₹1,299</b></p></a>
-        <a href=""><img src={powerbank}  className="d-block" alt=""/>
+        <p className="price"><b>From ₹1,299</b></p></Link>
+        <Link to="/powerbank"><img src={powerbank}  className="d-block" alt=""/>
         <p className="type">Power Bank</p>
-        <p className="price"><b>From ₹899</b></p></a>
+        <p className="price"><b>From ₹899</b></p></Link>
     </div>
     </div>
     <div className="container-fluid mt-4 ">
@@ -183,25 +183,25 @@ export const Types = () => {
     <h2 className="text-center"><b>Best Deals on  SmartPhones</b></h2>
     <div className="container-img container-fluid mt-5">
        
-        <a href=""><img src={phone1}  className="d-block" alt=""/>
+        <Link to=""><img src={phone1}  className="d-block" alt=""/>
         <p className="type">Infinix GT 20 Pro</p>
-        <p className="price"><b>From ₹22,999</b></p></a>
+        <p className="price"><b>From ₹22,999</b></p></Link>
        
-        <a href=""><img src={phone2}   className="d-block" alt=""/>
+        <Link to=""><img src={phone2}   className="d-block" alt=""/>
          <p className="type">Moto Edge 50</p>
-         <p className="price"><b>From ₹21,999</b></p></a>
-        <a href=""><img src={phone3} className="d-block" alt=""/>
+         <p className="price"><b>From ₹21,999</b></p></Link>
+        <Link to=""><img src={phone3} className="d-block" alt=""/>
         <p className="type">Nothing 2a</p>
-        <p className="price"><b>From ₹25,999</b></p></a>
-        <a href=""><img src={phone4}  className="d-block" alt=""/>
+        <p className="price"><b>From ₹25,999</b></p></Link>
+        <Link to=""><img src={phone4}  className="d-block" alt=""/>
         <p className="type">Poco M6 Pro</p>
-        <p className="price"><b>From ₹24,999</b></p></a>
-        <a href=""><img src={phone5}   className="d-block " alt=""/>
+        <p className="price"><b>From ₹24,999</b></p></Link>
+        <Link to=""><img src={phone5}   className="d-block " alt=""/>
         <p className="type">Realme P1 Pro</p>
-        <p className="price"><b>From ₹40,999</b></p></a>
-        <a href=""><img src={phone6}  className="d-block" alt=""/>
+        <p className="price"><b>From ₹40,999</b></p></Link>
+        <Link to="/realme"><img src={phone6}  className="d-block" alt=""/>
         <p className="type">Realme P1</p>
-        <p className="price"><b>From ₹30,999</b></p></a>
+        <p className="price"><b>From ₹30,999</b></p></Link>
     </div>
     </div>
       <div className="row mt-2 g-2">
@@ -240,28 +240,28 @@ export const Types = () => {
         </div>
       </div>
     </div>
-    <div className="grid-container">
+    <div className="grid-container mt-3 ms-3">
       <div className="image1">
         <div className="grid-item">
-            <img className="img1" src={care} alt="1" />
-          <h4>adbeni Skin & Beauty Care Combo</h4>
-          <h3>From ₹5,000</h3>
+            <img className="img1 img-thumbnail p-3" src={care} alt="1" />
+          <h6 className="mt-4">Adbeni Skin & Beauty Care Combo</h6>
+          <h6 className="text-success">From ₹5,000</h6>
         </div>
         <div className="grid-item">
           <div className="img2">
-          <img src={brush} width="200px" height="200px" alt="2" /></div>
-          <h4>Maange Makeup Brushes set</h4>
-          <h3>From ₹900</h3>
+          <img className="img-thumbnail d-inline-block pt-5 p-3" src={brush} width="400px" height="400px" alt="2" /></div>
+          <h6 className="mt-4">Maange Makeup Brushes set</h6>
+          <h6 className="text-success">From ₹900</h6>
         </div>
         <div className="grid-item">
-          <img src={lip} width="200px" height="200px" alt="3" />
-          <h4>Lipstick</h4>
-          <h3>From ₹700</h3>
+          <img className="img-thumbnail p-3" src={lip} width="200px" height="200px" alt="3" />
+          <h6 className="mt-4">Lipstick</h6>
+          <h6 className="text-success">From ₹700</h6>
         </div>
         <div className="grid-item">
-        <img src={make} width="200px" height="200px" alt="4"/> 
-        <h4>makeup kit</h4>
-        <h3>From ₹8,000</h3>
+        <img className="img-thumbnail p-3" src={make} width="200px" height="200px" alt="4"/> 
+        <h6 className="mt-4">Makeup kit</h6>
+        <h6 className="text-success">From ₹8,000</h6>
         </div>
       </div>
 
@@ -378,7 +378,7 @@ export const Types = () => {
            <p>Rupees 550 instant discount on flights on ixigo</p>
           
            <p>
-             Check out https://www.flipkart.com/plus/all-offers for the entire
+             Check out https://www.flipkart.com/plus/Linkll-offers for the entire
              list. Terms and conditions apply.
            </p>
         
@@ -423,7 +423,7 @@ export const Types = () => {
              for everybody out there. Whether youre looking for larger, fuller
              screens, power-packed batteries, blazing-fast processors,
              beautification apps, high-tech selfie cameras or just large internal
-             space, we take care of all the essentials. Shop from top br/ands in
+             space, we take care of all the essentials. Shop from top br/Linknds in
              the country like Samsung, Apple, Oppo, Xiaomi, Realme, Vivo, and Honor
              to name a few. Rest assured, you re buying from only the most reliable
              names in the market. Whats more, with Flipkarts Complete Mobile
@@ -500,9 +500,9 @@ export const Types = () => {
              criteria will have the option to buy larger quantities. To know more
              on the eligibility criteria and terms and conditions, please reach out
              to
-             <a href="mailto:Purchases.oni@flipkart.com">
+             <Link to="/mailto:Purchases.oni@flipkart.com">
                Purchases.oni@flipkart.com
-             </a>
+             </Link>
            </p>
    
            <h5>Small Home Appliances</h5>
@@ -527,7 +527,7 @@ export const Types = () => {
              Sephora among dozens of other top-of-the-ladder names. From summer
              staple maxi dresses, no-nonsense cigarette pants, traditional Bandhani
              kurtis to street-smart biker jackets, you can rely on us for a
-             wardrobe that is up to date. Explore our in-house br/ands like
+             wardrobe that is up to date. Explore our in-house br/Linknds like
              Metronaut, Anmi, and Denizen, to name a few, for carefully curated
              designs that are the talk of the town. Get ready to be spoiled for
              choice.Festivals, office get-togethers, weddings, br/unches, or

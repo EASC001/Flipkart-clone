@@ -10,6 +10,14 @@ import Otp from './components/user/Otp'
 import OtpLog from './components/user/OtpLog'
 import Footer from './components/navbar/Footer';
 import Profile from './components/user/Profile';
+import Phone from './components/pages/Phone';
+import Airpods from './components/pages/Airpods';
+import Fridge from './components/pages/Fridge';
+import Washing from './components/pages/Washing';
+import Giftcard from './components/user/Giftcard';
+import Watch from './components/pages/Watch';
+import Bluetooth from './components/pages/Bluetooth';
+import Powerbank from './components/pages/powerbank';
 
 
 function App() {
@@ -24,6 +32,14 @@ function App() {
           <Route path='/otp' element={<Otp />} />
           <Route path='/otplog' element={<OtpLog/>}/>
           <Route path='/profile' element={<Profile/>}/>
+          <Route path='/gift' element={<Giftcard/>}/>
+          <Route path='/realme' element={<Phone/>}/>
+          <Route path='/airpods' element={<Airpods/>}/>
+          <Route path='/fridge' element={<Fridge/>}/>
+          <Route path='/wash' element={<Washing/>}/>
+          <Route path='/watch' element={<Watch/>}/>
+          <Route path='/bluetooth' element={<Bluetooth/>}/>
+          <Route path='/powerbank' element={<Powerbank/>}/>
         </Routes>
         <Footer />
       </BrowserRouter>

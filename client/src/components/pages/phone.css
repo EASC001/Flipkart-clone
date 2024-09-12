@@ -1,0 +1,37 @@
+.grid-container-type{
+    display: grid;
+    grid-template-columns: 300px 1fr 200px;
+}
+.grid-item-type ul li{
+  font-size: small;
+  font-weight: lighter;
+  color: gray;
+  align-items:start;
+  margin-top: 2px;
+  padding: 1px;
+}
+.grid-item-type h3{
+    text-align: left;
+    margin-left: 0px;
+    padding: 1px;
+}
+.grid-item2-type h5{
+   color: green; 
+}
+.grid-item2-type p{
+    color: black;
+}
+.grid-item2-type del{
+    color: gray;
+    font-size: smaller;
+}
+*{
+    padding: 0px;
+    margin: 0px;
+}
+.buttons-link a{
+   
+    display: inline-block;
+    width: 200px;
+    
+}
